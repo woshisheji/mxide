@@ -1,0 +1,71 @@
+
+
+{
+
+"账号添加":"INSERT INTO `账号表` (`zhanghao`, `mima`, `chaoma`, `youxiang`) VALUES ('#zhanghao', '#mima', '#chaoma', '#youxiang')",
+
+"账号查询":"SELECT * FROM `账号表` WHERE `zhanghao` = '#zhanghao'",
+
+"角色添加":"INSERT INTO `玩家表` (`名称`, `职业`, `accountid`) VALUES ('#name','#job', '#accountid')",
+
+"角色插入":"INSERT INTO `玩家表` (`名称`, `职业`, `性别`, `accountid`) VALUES ('%d', '%d', '%d', '%d')",
+
+"角色名查询":"SELECT * FROM `玩家表` WHERE `名称` = '%d'",
+
+"角色查找":"SELECT *  FROM `玩家表` WHERE `accountid` = '#accountid'",
+
+"角色修改":"UPDATE `玩家表` SET `#key`='#value' WHERE (`id`='#id')",
+
+"装备获取":"SELECT * FROM `玩家物品表` WHERE `玩家ID` = '#userid'",
+
+"装备修改":"UPDATE `玩家物品表` SET `#key`='#value' WHERE (`id`='#id')",
+
+"技能获取":"SELECT * FROM `玩家技能表` WHERE (`玩家id` = '#id') ",
+
+"物品插入":"INSERT INTO `玩家物品表` (`物品ID`, `玩家ID`, `位置`) VALUES ('#itemid', '#userid', '#pos');",
+
+"物品删除":"DELETE FROM `玩家物品表` WHERE (`id`='#id')",
+
+"玩家排行":"SELECT * FROM `玩家表` ORDER BY `lev` DESC LIMIT 0, 50",
+
+"加载职业":"SELECT * FROM `职业表`",
+
+"加载地图":"SELECT * FROM `地图表`",
+
+"加载NPC":"SELECT * FROM `npc表`",
+
+"加载怪物":"SELECT * FROM `怪物表`",
+
+"加载刷怪点":"SELECT * FROM `刷怪点表`",
+
+"加载刷怪":"SELECT * FROM `刷怪表`",
+
+"加载升级":"SELECT * FROM `升级表`",
+
+"加载物品":"SELECT * FROM `物品表`",
+
+"加载掉落":"SELECT * FROM `掉落表`",
+
+"加载附魔":"SELECT * FROM `附魔表`",
+
+"加载商城":"SELECT * FROM `商城表`",
+
+"加载技能":"SELECT * FROM `技能表`",
+
+"加载摊位":"SELECT * FROM `摊位表`",
+
+"变量添加":"INSERT INTO `玩家变量表` (playerid, `key`, `value`, lasttime) VALUES ('#id', '#key', '#value', '#lasttime')",
+"变量删除":"DELETE FROM `玩家变量表` WHERE playerid = '#id' AND `key` = '#key'",
+"变量获取":"SELECT * FROM `玩家变量表` WHERE playerid = '#id'",
+"变量修改":"UPDATE `玩家变量表` SET `value` = '#value' WHERE playerid = '#id' AND `key` = '#key'",
+
+
+"帮派插入": "INSERT INTO `帮派表` (`帮派名称`, `帮主ID`, `公告`, `总贡献`) VALUES ('#帮派名称', #帮主ID, '#公告', #总贡献)",
+"帮派查询": "SELECT * FROM `帮派表` WHERE `ID` = '#帮派ID'",
+"帮派更新公告": "UPDATE `帮派表` SET `公告`='#公告' WHERE (`ID`='#帮派ID')",
+"帮派更新总贡献": "UPDATE `帮派表` SET `总贡献`=#总贡献 WHERE (`ID`='#帮派ID')",
+"帮派删除": "DELETE FROM `帮派表` WHERE (`ID`='#帮派ID')",
+"帮派成员清空": "UPDATE `玩家表` SET `帮派ID`=0 WHERE `帮派ID`='#帮派ID'"
+
+
+}
